@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main" prefHeight="1004.0" prefWidth="1718.0" style="-fx-background-color: transparent; -fx-background-radius: 10;" styleClass="main-anchor" stylesheets="@main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sunday.controller.WelcomeController">
+    <children>
+        <AnchorPane fx:id="stock" layoutX="227.0" layoutY="42.0" prefHeight="962.0" prefWidth="1489.0" stylesheets="@main.css">
+            <AnchorPane fx:id="stockText" layoutY="-3.0" prefHeight="326.0" prefWidth="1526.0" style="-fx-background-color: #304ffe;">
+                <children>
+                    <TextField fx:id="vehicleNoStock" layoutX="226.0" layoutY="49.0" prefHeight="37.0" prefWidth="185.0" promptText="Enter  Vehicle No" style="-fx-background-radius: 0;">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </TextField>
+                    <TextField fx:id="weightTonsStock" layoutX="623.0" layoutY="52.0" prefHeight="37.0" prefWidth="185.0" promptText="Enter weight [Kgs]" style="-fx-background-radius: 0;">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </TextField>
+                    <TextField fx:id="rateStock" layoutX="1018.0" layoutY="51.0" prefHeight="37.0" prefWidth="185.0" promptText="Enter Rate" style="-fx-background-radius: 0;">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </TextField>
+                    <TextField fx:id="paidStock" layoutX="224.0" layoutY="172.0" prefHeight="37.0" prefWidth="195.0" promptText="Enter Paid" style="-fx-background-radius: 0;">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </TextField>
+                    <Button fx:id="submitStock" layoutX="620.0" layoutY="176.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="149.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="Submit" textFill="#6200ea">
+                        <font>
+                            <Font name="System Bold" size="16.0" />
+                        </font>
+                  <graphic>
+                     <ImageView fitHeight="29.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@image/save.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+                    </Button>
+                    <Label fx:id="totalAmountStock" layoutX="1415.0" layoutY="57.0" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="52.0" layoutY="57.0" text="Enter Vehicle No" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="454.0" layoutY="59.0" text="Enter Weight [Kgs]" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="844.0" layoutY="57.0" text="Enter Rate" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="47.0" layoutY="178.0" text="Enter Amount" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="1246.0" layoutY="56.0" text="Total Amount" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Label>
+                </children>
+            </AnchorPane>
+            <TableView fx:id="stockTable" editable="true" layoutY="323.0" prefHeight="639.0" prefWidth="1526.0">
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                </columnResizePolicy>
+            </TableView>
+        </AnchorPane>
+        <AnchorPane fx:id="customer" layoutX="227.0" layoutY="42.0" prefHeight="962.0" prefWidth="1526.0" style="-fx-background-radius: 10;">
+            <children>
+                <AnchorPane fx:id="customerFields" layoutY="-1.0" prefHeight="326.0" prefWidth="1526.0" style="-fx-background-color: #304ffe;" stylesheets="@main.css">
+                    <children>
+                        <TextField fx:id="customerName" layoutX="220.0" layoutY="55.0" prefHeight="37.0" prefWidth="195.0" promptText="Enter Customer Name" style="-fx-background-radius: 0;">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="weightCustomer" layoutX="620.0" layoutY="57.0" prefHeight="37.0" prefWidth="155.0" promptText="Enter Weight" style="-fx-background-radius: 0;">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="rateCustomer" layoutX="928.0" layoutY="55.0" prefHeight="37.0" prefWidth="149.0" promptText="Enter Rate" style="-fx-background-radius: 0;">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="crateCustomer" layoutX="220.0" layoutY="181.0" prefHeight="37.0" prefWidth="185.0" promptText="Enter Crate" style="-fx-background-radius: 0;">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="paidAmountCustomer" layoutX="617.0" layoutY="186.0" prefHeight="37.0" prefWidth="155.0" promptText="Enter Paid Amount" style="-fx-background-radius: 0;">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </TextField>
+                        <Button fx:id="submitCustomer" layoutX="933.0" layoutY="188.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="139.0" style="-fx-background-radius: 20; -fx-background-color: #ffffff;" styleClass="submit" text="Submit" textFill="#6200ea">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/print.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                        </Button>
+                        <TextField fx:id="customerFilter" alignment="TOP_CENTER" layoutX="1235.0" layoutY="263.0" prefHeight="39.0" prefWidth="250.0" promptText="Search" style="-fx-background-radius: 25;" styleClass="search" stylesheets="@main.css">
+                            <font>
+                                <Font name="HP Simplified" size="17.0" />
+                            </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                        </TextField>
+                        <Label layoutX="27.0" layoutY="60.0" text="Enter Customer Name" textFill="WHITE" wrapText="true">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="442.0" layoutY="60.0" text="Enter Weight" textFill="WHITE" wrapText="true">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="806.0" layoutY="62.0" text="Enter Rate" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="181.0" prefHeight="27.0" prefWidth="176.0" text="Enter Crate" textFill="WHITE" wrapText="true">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="439.0" layoutY="191.0" text="Enter Paid Amount" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="1101.0" layoutY="60.0" text="Total Amount" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="totalAmountCustomer" layoutX="1231.0" layoutY="60.0" prefHeight="27.0" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </AnchorPane>
+                <TableView fx:id="customerTable" editable="true" layoutY="323.0" opacity="0.22" prefHeight="639.0" prefWidth="1526.0" stylesheets="@main.css">
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="60.0" prefHeight="42.0" prefWidth="1526.0" style="-fx-background-color: #ffffff;" stylesheets="@main.css">
+            <children>
+                <Button fx:id="printer" layoutX="1487.0" layoutY="6.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: #37474f; -fx-background-radius: 20;" stylesheets="@main.css" text="Set Printer" textFill="#1e88e5">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/setprint.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                </Button>
+                <Label fx:id="time" layoutX="306.0" layoutY="9.0" prefHeight="25.0" prefWidth="1163.0" textFill="#00a6ff" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets right="10.0" />
+                    </opaqueInsets>
+                </Label>
+            <HBox layoutX="1593.0" prefHeight="42.0" prefWidth="97.0">
+               <children>
+                      <Button fx:id="minus" alignment="CENTER" mnemonicParsing="false" prefHeight="44.0" prefWidth="52.0" style="-fx-background-color: #37474f; -fx-background-radius: 0;" styleClass="minus" textFill="WHITE">
+                          <font>
+                              <Font name="System Bold" size="18.0" />
+                          </font>
+                          <graphic>
+                              <ImageView accessibleRole="BUTTON" fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@image/min.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="exit" cancelButton="true" mnemonicParsing="false" prefHeight="44.0" prefWidth="52.0" style="-fx-background-color: #37474f; -fx-background-radius: 0;" styleClass="exit" stylesheets="@main.css" textFill="WHITE" wrapText="true">
+                          <font>
+                              <Font name="System Bold" size="18.0" />
+                          </font>
+                          <graphic>
+                              <ImageView accessibleRole="BUTTON" fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" smooth="false">
+                                  <image>
+                                      <Image url="@image/exit.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                      </Button>
+               </children>
+            </HBox>
+            <Button fx:id="logout" layoutX="175.0" layoutY="6.0" mnemonicParsing="false" style="-fx-background-color: #37474f; -fx-background-radius: 20;" text="Logout" textFill="#1e88e5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="15.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            </children>
+         <effect>
+            <DropShadow />
+         </effect>
+        </AnchorPane>
+        <AnchorPane fx:id="sideBar" prefHeight="1006.0" prefWidth="229.0" style="-fx-background-color: #6200ea;" stylesheets="@main.css">
+            <children>
+                <Button fx:id="customerBtn" layoutY="305.0" mnemonicParsing="false" onAction="#hideAndShow" prefHeight="50.0" prefWidth="227.0" style="-fx-background-radius: 25; -fx-background-color: #ffffff;" text="Customer">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="stockBtn" layoutY="383.0" mnemonicParsing="false" onAction="#hideAndShow" prefHeight="50.0" prefWidth="227.0" style="-fx-background-radius: 25; -fx-background-color: #ffffff;" text="Stock">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="excelToday" layoutY="461.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="227.0" style="-fx-background-color: #ffffff; -fx-background-radius: 25;" text="Export All Customer">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="stockExport" layoutY="541.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="227.0" style="-fx-background-radius: 25; -fx-background-color: #ffffff;" text="Export All Stock">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Label layoutX="14.0" layoutY="14.0" prefHeight="50.0" prefWidth="195.0" text="AFC Friut Store" textFill="WHITE">
+                    <font>
+                        <Font name="Showcard Gothic" size="22.0" />
+                    </font>
+                </Label>
+                <Label layoutX="14.0" layoutY="910.0" text="Made By" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="20.0" layoutY="937.0" prefHeight="56.0" prefWidth="209.0" text="Mohd Obaid Ahmed" textFill="#e53935">
+                    <font>
+                        <Font name="Mistral" size="32.0" />
+                    </font>
+                </Label>
+                <Button fx:id="unpaid" layoutY="620.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="227.0" style="-fx-background-color: #ffffff; -fx-background-radius: 25;" text="Export Unpaid Customer">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="205.0" fitWidth="319.0" layoutX="7.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/allah.png" />
+                    </image>
+                </ImageView>
+            <Button fx:id="userAccount" layoutY="703.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="227.0" style="-fx-background-color: white; -fx-background-radius: 25;" text="User's Account">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            </children>
+         <effect>
+            <DropShadow height="12.0" radius="5.5" width="12.0" />
+         </effect>
+        </AnchorPane>
+    </children>
+</AnchorPane>
